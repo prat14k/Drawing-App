@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Canvas" customModule="DrawingApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="282" height="351"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Hy-dr-4Cn">
+                    <rect key="frame" x="0.0" y="0.0" width="282" height="351"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="40h-jG-f7r">
+                    <rect key="frame" x="0.0" y="0.0" width="282" height="351"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="40h-jG-f7r" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="6Ut-5K-7u4"/>
+                <constraint firstItem="4Hy-dr-4Cn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Edk-AA-NAW"/>
+                <constraint firstItem="4Hy-dr-4Cn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ILe-KO-Czy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="40h-jG-f7r" secondAttribute="trailing" id="KPk-YW-Mfu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="4Hy-dr-4Cn" secondAttribute="bottom" id="OuZ-52-0Gx"/>
+                <constraint firstItem="40h-jG-f7r" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="btN-4S-ETQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="40h-jG-f7r" secondAttribute="bottom" id="gpm-Wh-2E8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4Hy-dr-4Cn" secondAttribute="trailing" id="zGT-DF-wKz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="mainImageView" destination="40h-jG-f7r" id="tC6-Pu-tPa"/>
+                <outlet property="tempImageView" destination="4Hy-dr-4Cn" id="vyb-NC-whh"/>
+            </connections>
+            <point key="canvasLocation" x="-13" y="211.5"/>
+        </view>
+    </objects>
+</document>
