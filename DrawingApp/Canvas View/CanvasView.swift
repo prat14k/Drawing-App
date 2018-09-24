@@ -8,16 +8,17 @@
 
 import UIKit
 
-class Canvas: UIView {
+class CanvasView: UIView {
     
-    var lineColor: UIColor = .black
-    var lineWidth: CGFloat = 10.0
+    private var lineColor: UIColor = .black
+    private var lineWidth: CGFloat = 10.0
+    private var opacity: CGFloat = 1.0
+    
     @IBOutlet private var tempImageView: UIImageView!
     @IBOutlet private var mainImageView: UIImageView!
-    static private let nibIdentifier = "Canvas"
+    static private let nibIdentifier = "CanvasView"
     
     private var lastPoint = CGPoint.zero
-    private var opacity: CGFloat = 1.0
     private var swiped = false
     
     
@@ -62,13 +63,14 @@ class Canvas: UIView {
     
 }
 
-extension Canvas {
+extension CanvasView {
     
-    static func createNdAdd(in view: UIView) -> Canvas {
-        guard let canvasView = Bundle.main.loadNibNamed(Canvas.nibIdentifier, owner: self, options: nil)?.first as? Canvas
+    static func createNdAdd(in view: UIView) -> CanvasView {
+        guard let canvasView = Bundle.main.loadNibNamed(CanvasView.nibIdentifier, owner: self, options: nil)?.first as? CanvasView
             else { fatalError("No such Result view found") }
         canvasView.frame = view.bounds
         canvasView.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+        canvasView.backgroundColor = .clear
         view.addSubview(canvasView)
         return canvasView
     }

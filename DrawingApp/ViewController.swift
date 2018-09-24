@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let canvas = Canvas.createNdAdd(in: view)
+        let canvas = CanvasView.createNdAdd(in: view)
         canvas.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(canvas)
         
